@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X-GOKU Mines Prediction Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="assets/logo.png" alt="Goku Logo" class="logo" />
+      <h1>X-GOKU</h1>
+    </header>
+
+    <div class="controls">
+      <label for="mines">Select Mines:</label>
+      <select id="mines"></select>
+      <button onclick="predictSafeTiles()">Predict</button>
+    </div>
+
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <script>
+    for (let i = 1; i <= 24; i++) {
+      document.getElementById('mines').innerHTML += `<option value="${i}">${i}</option>`;
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
